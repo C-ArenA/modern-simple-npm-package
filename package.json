@@ -1,0 +1,12 @@
+{
+  "name": "@arenamovediza/modern",
+  "version": "1.0.0",
+  "description": "Another testing npm package used to learn how to do it",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["useless", "modern"],
+  "author": "Carlos Arena <carlostata.ca@gmail.com>",
+  "license": "MIT"
+}
