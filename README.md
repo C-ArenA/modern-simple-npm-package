@@ -11,3 +11,6 @@ Some of the things I want to remember about its content, thigs i've learned by m
   * LICENSE
   * README.md
   * package.json
+* If we are using scoped names (e.g. @something/name) for the package we need to run the following command to publish our package: `npm publish --access=public`. We could also define that option inside our package.json (I don't remember how XD).
+* If you don't want or don't need to declare types for your package, you could create a .d.ts file with the following content: `declare module '@your/package_name'`. This way those using Typescript will still be able to use your library. 
+  * As a side note, if you want to consume libraries without the types definition, you can create a .d.ts file to manually create the declaration, as stated by [this stackoverflow answer](https://stackoverflow.com/a/60304662)
