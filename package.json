@@ -8,5 +8,6 @@
   },
   "keywords": ["useless", "modern"],
   "author": "Carlos Arena <carlostata.ca@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "files": ["index.js"]
 }
