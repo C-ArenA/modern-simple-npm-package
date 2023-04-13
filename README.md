@@ -14,3 +14,17 @@ Some of the things I want to remember about its content, thigs i've learned by m
 * If we are using scoped names (e.g. @something/name) for the package we need to run the following command to publish our package: `npm publish --access=public`. We could also define that option inside our package.json (I don't remember how XD).
 * If you don't want or don't need to declare types for your package, you could create a .d.ts file with the following content: `declare module '@your/package_name'`. This way those using Typescript will still be able to use your library. 
   * As a side note, if you want to consume libraries without the types definition, you can create a .d.ts file to manually create the declaration, as stated by [this stackoverflow answer](https://stackoverflow.com/a/60304662)
+
+### about the usage of commonJS an ESM for our package 
+*ESM = EcmaScript Modules*
+*I've read [this article](https://blog.logrocket.com/es-modules-in-node-today/) to understand some of these points*
+*Of course, it was more informative to read the [documentation about this topic](https://nodejs.org/api/packages.html#type)*
+* By default `.js` files are treated as **commonJS** by node (and I think they are interpreted like so by bundlers).
+* `.mjs` are always treated as ESM and `.cjs` as commonJS no matter what's inside the nearest `package.json` file
+* If we define `type="module"` inside the `package.json` file all `.js` files will be treated as **ESM**. If we want to treat them as **CommonJS** we must change the extension to `.cjs`
+* If we define `type="commonjs"` inside the package.json file or if we totally ignore that property at all `.js` files will be treated as **CommonJS**. If we want to treat them as **ESM** we must change the extension to `.mjs`
+* The above means that if we want to deliver to both **ESM** and **CommonJS** we have three options:
+  * Define `type="module"` and use `.cjs` for thos **commonJS** files.
+  * Define `type="commonjs"` and use `.mjs` for those **ESM** files.
+  * Not to define type property and use `.mjs` for those **ESM** files
+* As I prefer to use **ESM** I will use the former option, although the tutorial I'm following uses the third one.

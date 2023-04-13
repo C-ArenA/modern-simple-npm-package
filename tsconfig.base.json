@@ -1,0 +1,20 @@
+{
+	"compilerOptions": {
+		"strict": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"skipLibCheck": true,
+		"checkJs": true,
+		"allowJs": true,
+		"declaration": true,
+		"declarationMap": true,
+		"allowSyntheticDefaultImports": true,
+		"rootDir": "./src" // The generated files will be generated according to this directory (by default it would use the common parent directory of all included ts files to compile)
+	},
+	"files": [ // The most important files to be compiled (Mandatory files)
+		"./src/index.ts"
+	],
+	"include": [ // All the files that can be be compiled
+		"./src/**/*"
+	]
+}
