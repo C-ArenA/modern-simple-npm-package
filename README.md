@@ -28,3 +28,7 @@ Some of the things I want to remember about its content, thigs i've learned by m
   * Define `type="commonjs"` and use `.mjs` for those **ESM** files.
   * Not to define type property and use `.mjs` for those **ESM** files
 * As I prefer to use **ESM** I will use the former option, although the tutorial I'm following uses the third one.
+* The ESM files won't be directly imported by the browser. WE'll need a bundler to do so. If we want a way to use this library directly in the browser, we need to bundle the entire package.
+
+### About testing
+Even though we have various testing libraries, the one I'm using here is vitest. I didn't find good documentation about it, but was led by the hype. However, it's working fine with my minimal setup, which is being commited at the same time of these words.

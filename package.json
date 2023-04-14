@@ -7,7 +7,7 @@
 		"modern"
 	],
 	"author": "Carlos Arena <carlostata.ca@gmail.com>",
-	"exports": { 
+	"exports": {
 		".": {
 			"import": {
 				"types": "./lib/esm/types/index.d.ts",
@@ -30,6 +30,10 @@
 		"build": "npm run clean && npm run build:esm && npm run build:cjs",
 		"build:esm": "tsc --project ./tsconfig.esm.json",
 		"build:cjs": "tsc --project ./tsconfig.cjs.json && mv lib/cjs/index.js lib/cjs/index.cjs",
-		"prepack": "npm run build"
+		"prepack": "npm run build",
+		"test": "vitest"
+	},
+	"devDependencies": {
+		"vitest": "^0.30.1"
 	}
 }
